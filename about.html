@@ -21,7 +21,7 @@ description: >-
       />
     </div>
     <div class="name">
-      <a href="mailto:{{ person.email }}">{{ person.name }}</a>
+      <a href="{{ person.page }}">{{ person.name }}</a>
     </div>
     <div class="position">{{ person.affiliation }}</div>
   </li>
@@ -38,7 +38,7 @@ description: >-
       />
     </div>
     <div class="name">
-      <a href="mailto:{{ person.email }}">{{ person.name }}</a>
+      <a href="{{ person.page }}">{{ person.name }}</a>
     </div>
     <div class="position">{{ person.affiliation }}</div>
   </li>
@@ -47,8 +47,7 @@ description: >-
 
 <h4>Advisory Committee</h4>
 <ul class="team">
-  {% for person in site.team_members %} {% if person.position == "Advisory
-  Committee" %}
+  {% for person in site.team_members %} {% if person.position == "Advisory_Committee" %}
   <li>
     <div class="square-image">
       <img
@@ -57,7 +56,7 @@ description: >-
       />
     </div>
     <div class="name">
-      <a href="mailto:{{ person.email }}">{{ person.name }}</a>
+      <a href="{{ person.page }}">{{ person.name }}</a>
     </div>
     <div class="position">{{ person.affiliation }}</div>
   </li>
@@ -68,10 +67,13 @@ description: >-
 <ul>
   {% for person in site.former_members %}
   <li>
-    <a href="mailto:{{ person.email }}">{{ person.name }}</a>
+    {{ person.name }}
   </li>
   {% endfor %}
 </ul>
 
 <h3>Our sponsors</h3>
 <p>{% include funding.html %}</p>
+
+<h3 class="editable" id="acknowledgment">Citation</h3>
+{% include acknowledgement.html %}
