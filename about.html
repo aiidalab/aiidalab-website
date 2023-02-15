@@ -47,7 +47,8 @@ description: >-
 
 <h4>Advisory Committee</h4>
 <ul class="team">
-  {% for person in site.team_members %} {% if person.position == "Advisory_Committee" %}
+  {% for person in site.team_members %} {% if person.position ==
+  "Advisory_Committee" %}
   <li>
     <div class="square-image">
       <img
@@ -66,9 +67,7 @@ description: >-
 <h4>Former contributors</h4>
 <ul>
   {% for person in site.former_members %}
-  <li>
-    {{ person.name }}
-  </li>
+  <li>{{ person.name }}</li>
   {% endfor %}
 </ul>
 
