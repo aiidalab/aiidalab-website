@@ -1,6 +1,6 @@
 ---
 name: Andres Ortega Guerrero
-email: andres.ortega-guerrero@empa.ch 
+email: andres.ortega-guerrero@empa.ch
 image_path: /images/andres.jpeg
 position: Maintainer
 affiliation: Empa
