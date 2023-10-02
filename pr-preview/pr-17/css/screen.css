@@ -1,4 +1,4 @@
-footer .footer-columns, .contact-box, .team, .acknowledgment, .deployments { display: -webkit-box; display: -webkit-flex; display: -moz-flex; display: -ms-flexbox; display: flex; }
+footer .footer-columns, .contact-box, .team, .deployments, .citation { display: -webkit-box; display: -webkit-flex; display: -moz-flex; display: -ms-flexbox; display: flex; }
 
 html { background: #2b2b40; }
 
@@ -43,6 +43,12 @@ p, address { font-size: 1.38em; color: #666; margin-bottom: 20px; font-weight: 3
 .hero p { color: #fff; }
 
 @media (min-width: 768px) { .flex { display: -webkit-box; display: -webkit-flex; display: -moz-flex; display: -ms-flexbox; display: flex; align-items: center; flex-direction: row; } .flex .text, .flex .image { -webkit-flex: 1; flex: 1; padding: 0 20px; } .content section:nth-child(even) .flex { flex-direction: row-reverse; } }
+
+.citation { flex-direction: column; align-items: center; margin-bottom: 2em; }
+
+.citation h2 { margin-top: 60px; margin-bottom: 10px; }
+
+.citation .reference { font-style: italic; font-weight: normal; }
 
 .container, .text-container { margin: 0 auto; position: relative; padding: 0 20px; }
 
@@ -119,12 +125,6 @@ blockquote:before { color: #ccc; content: open-quote; font-size: 4em; line-heigh
 .deployments .deployment li h3 { padding: 0; margin: 0; color: #fff; font-weight: normal; }
 
 .deployments .deployment li img { width: 35%; }
-
-.acknowledgment { flex-direction: column; align-items: center; margin-bottom: 2em; }
-
-.acknowledgment p { font-weight: inherit; font-size: inherit; }
-
-.acknowledgment .reference { font-style: italic; font-weight: normal; }
 
 .faq { color: #666; }
 
