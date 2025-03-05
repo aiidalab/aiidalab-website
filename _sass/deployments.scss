@@ -1,61 +1,73 @@
 .deployments {
-  @extend %flexbox;
-  @include flex-flow(wrap);
-  padding: 50px 0 30px 0;
+  padding: 5px 0;
 
   .deployment {
-    list-style: none;
-    padding: 0;
-    margin: 0 10px 50px 10px;
-    text-align: center;
-    border: 1px solid #eee;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px #eee;
-    width: 100%;
+    height: 100%;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    .card {
+      height: 100%;
 
-    .highlighted {
-      font-size: 1.2em;
-    }
-
-    .deployments-cta {
-      padding: 0;
-
-      .status {
-        font-size: 0.8em;
-        padding: 0.8em 1em;
-        font-weight: bold;
-      }
-
-      a {
-        display: block;
-        box-sizing: border-box;
-        padding: 20px 0;
-        border-radius: 0 0 2px 2px;
-        border: 0;
-      }
-    }
-
-    @media #{$desktop} {
-      -webkit-flex: 1;
-      flex: 1;
-    }
-
-    li {
-      border-top-right-radius: 5px;
-      border-top-left-radius: 5px;
-      padding: 20px 0;
-      h3 {
-        padding: 0;
-        margin: 0;
-        color: #fff;
-        font-weight: normal;
-      }
       img {
-        width: 35%;
+        padding: 1em;
+        height: 100px;
+        width: auto;
+        object-fit: contain;
+      }
+
+      .card-header,
+      .card-footer {
+        display: grid;
+        margin: -1px;
+      }
+
+      .card-header {
+        font-size: x-large;
+        font-weight: bold;
+        color: white;
+      }
+
+      .card-footer {
+        padding: 0;
+
+        .btn {
+          font-size: large;
+          text-decoration: none;
+          border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px);
+          border: 0;
+        }
+      }
+
+      .card-body {
+        display: flex;
+        flex-direction: column;
+
+        .content {
+          flex: 1;
+
+          h6 {
+            margin: 0;
+            font-weight: bold;
+          }
+
+          div {
+            margin-bottom: 10px;
+          }
+
+          ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+          }
+
+          img {
+            height: auto;
+            width: 100%;
+          }
+        }
+
+        .status {
+          font-weight: bold;
+        }
       }
     }
   }
