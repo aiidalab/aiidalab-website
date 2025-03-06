@@ -59,9 +59,17 @@
             margin: 0;
           }
 
-          img {
-            height: auto;
-            width: 100%;
+          .sponsors {
+            ul {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+            }
+
+            img {
+              height: auto;
+              width: 100%;
+            }
           }
         }
 
