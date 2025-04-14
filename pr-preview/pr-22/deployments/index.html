@@ -150,126 +150,406 @@
       <h2>Official Deployments</h2>
        
       <p class="subtext">You can <a href="https://aiidalab.readthedocs.io/en/latest/usage/index.html#aiidalab-launch">run AiiDAlab yourself</a>, however we also maintain a few official cloud-backed deployments for researchers affiliated with some of the projects funding the development of AiiDAlab.</p>
-       <div class="deployments">
-  
-  <ul class="deployment">
-    <li style="background: #D21F15">
-      <h3>Materials Cloud</h3>
-    </li>
+       <div class="deployments-page">
+  <div class="accordion mb-3" id="deploymentsAccordion">
     
-    <li  class="highlighted" >
-      Open to all researchers affiliated with <a href="https://www.materialscloud.org/home#partners">Materials Cloud partners</a>  
-    </li>
-    
-    <li >
-      Hosted at the <a href="https://www.cscs.ch/">Swiss National Supercomputing Centre (CSCS)</a>  
-    </li>
-    
-    <li >
-      Policies <br> 
-      <a href="/pr-preview/pr-22/terms-of-use">Terms of Use</a><br />
-      
-      <a href="/pr-preview/pr-22/privacy-policy">Privacy Policy (Personal Data Protection)</a><br />
-       
-    </li>
-    
-    <li >
-      Sponsored by a <a href="https://prace-ri.eu/">PRACE</a>-<a href="https://fenix-ri.eu/">FENIX</a> grant  
-    </li>
-    
-    <li >
-        
-      <img src="/images/endorsers/prace.png" alt="PRACE logo" />
-      
-      <img src="/images/endorsers/fenix.png" alt="FENIX logo" />
-      
-    </li>
-     
-    <li class="deployments-cta">
-      <div class="status">Status: ONLINE</div>
-      <div class="button">
-        <a
-          style="background: #D21F15"
-          href="https://aiidalab.materialscloud.org"
-          >Login &rarr;</a
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="heading1">
+        <button
+          class="accordion-button "
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapse1"
+          aria-expanded="true"
+          aria-controls="collapse1"
         >
+          Open to all
+        </button>
+      </h2>
+      <div
+        id="collapse1"
+        class="accordion-collapse collapse show"
+        aria-labelledby="heading1"
+        data-bs-parent="#deploymentsAccordion"
+      >
+        <div class="accordion-body">
+          
+          <div class="deployments row gy-4">
+            
+            <div class="col-md-6 col-xxl-4">
+              <div class="deployment">
+                <div class="card text-center shadow">
+                  <img
+                    src="/pr-preview/pr-22/aiidalab_logo.png"
+                    class="card-img-top"
+                    alt="Demo server"
+                  />
+                  <div
+                    class="card-header"
+                    style="background: #D21F15"
+                  >
+                    Demo server
+                  </div>
+                  <div class="card-body">
+                    <div class="content">
+                      <div class="host">
+                        <h6>Hosted by</h6>
+                        
+                        <a href="https://www.psi.ch">Paul Scherrer Institute (PSI)</a><br />
+                        
+                        <a href="https://www.empa.ch">Eidgenössische Materialprüfungs- und Forschungsanstalt (Empa)</a><br />
+                        
+                        <a href="https://www.cscs.ch/">Swiss National Supercomputing Centre (CSCS)</a><br />
+                        
+                      </div>
+                      <div class="access">
+                        <h6>Access</h6>
+                        Open to all researchers
+                      </div>
+                       
+                    </div>
+                    <div class="status">
+                      Status: ONLINE
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <a
+                      href="https://demo.aiidalab.io"
+                      class="btn btn-primary"
+                      style="background: #D21F15"
+                      >Login </a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
       </div>
-    </li>
+    </div>
     
-  </ul>
-  
-  <ul class="deployment">
-    <li style="background: #05587B">
-      <h3>Materials MarketPlace</h3>
-    </li>
-    
-    <li  class="highlighted" >
-      Open to all Materials Modeling MarketPlace users  
-    </li>
-    
-    <li >
-      Hosted at <a href="https://www.digitalocean.com/">DigitalOcean</a>  
-    </li>
-    
-    <li >
-      Sponsored by the <a href="https://www.materials-marketplace.eu/">Materials Modeling MarketPlace</a>  
-    </li>
-    
-    <li >
-        
-      <img src="/images/endorsers/materials-marketplace.png" alt="Materials MarketPlace logo" />
-      
-    </li>
-     
-    <li class="deployments-cta">
-      <div class="status">Status: NOT AVAIL</div>
-      <div class="button">
-        <a
-          style="background: #05587B"
-          href="https://materials-marketplace.aiidalab.net"
-          >Login &rarr;</a
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="heading2">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapse2"
+          aria-expanded="true"
+          aria-controls="collapse2"
         >
+          By membership
+        </button>
+      </h2>
+      <div
+        id="collapse2"
+        class="accordion-collapse collapse "
+        aria-labelledby="heading2"
+        data-bs-parent="#deploymentsAccordion"
+      >
+        <div class="accordion-body">
+          
+          <div class="deployments row gy-4">
+            
+            <div class="col-md-6 col-xxl-4">
+              <div class="deployment">
+                <div class="card text-center shadow">
+                  <img
+                    src="https://www.materialscloud.org/images/ff36572c.mcloud_logo.png"
+                    class="card-img-top"
+                    alt="Materials Cloud"
+                  />
+                  <div
+                    class="card-header"
+                    style="background: #D21F15"
+                  >
+                    Materials Cloud
+                  </div>
+                  <div class="card-body">
+                    <div class="content">
+                      <div class="host">
+                        <h6>Hosted by</h6>
+                        
+                        <a href="https://www.cscs.ch/">Swiss National Supercomputing Centre (CSCS)</a><br />
+                        
+                      </div>
+                      <div class="access">
+                        <h6>Access</h6>
+                        Open to all researchers affiliated with <a href="https://www.materialscloud.org/home#partners">Materials Cloud partners</a>
+                      </div>
+                      
+                      <div class="sponsors">
+                        <h6>Sponsored by</h6>
+                        <ul>
+                          
+                          <li
+                            style="width: calc(100% / 2)"
+                          >
+                            <a href="https://prace-ri.eu/">
+                              <img
+                                src="https://prace-ri.eu/wp-content/uploads/2019/08/logo-icon.png"
+                                alt="PRACE"
+                              />
+                            </a>
+                          </li>
+                          
+                          <li
+                            style="width: calc(100% / 2)"
+                          >
+                            <a href="https://fenix-ri.eu/">
+                              <img
+                                src="https://fenix-ri.eu/sites/default/files/public/home/fenix-logo.svg"
+                                alt="FENIX"
+                              />
+                            </a>
+                          </li>
+                          
+                        </ul>
+                      </div>
+                       
+                      <div class="policies">
+                        <h6>Policies</h6>
+                        <ul>
+                          
+                          <li>
+                            <a href="https://aiidalab.materialscloud.org/hub/static/terms-of-use.html">Terms of Use</a>
+                          </li>
+                          
+                          <li>
+                            <a href="https://aiidalab.materialscloud.org/hub/static/privacy-policy.html">Privacy Policy (Personal Data Protection)</a>
+                          </li>
+                          
+                        </ul>
+                      </div>
+                      
+                    </div>
+                    <div class="status">
+                      Status: ONLINE
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <a
+                      href="https://aiidalab.materialscloud.org"
+                      class="btn btn-primary"
+                      style="background: #D21F15"
+                      >Login </a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-6 col-xxl-4">
+              <div class="deployment">
+                <div class="card text-center shadow">
+                  <img
+                    src="https://materials-marketplace.eu/assets/img/logo.svg"
+                    class="card-img-top"
+                    alt="Materials MarketPlace"
+                  />
+                  <div
+                    class="card-header"
+                    style="background: #05587B"
+                  >
+                    Materials MarketPlace
+                  </div>
+                  <div class="card-body">
+                    <div class="content">
+                      <div class="host">
+                        <h6>Hosted by</h6>
+                        
+                        <a href="https://www.digitalocean.com/">DigitalOcean</a><br />
+                        
+                      </div>
+                      <div class="access">
+                        <h6>Access</h6>
+                        Open to all Materials Modeling MarketPlace users
+                      </div>
+                      
+                      <div class="sponsors">
+                        <h6>Sponsored by</h6>
+                        <ul>
+                          
+                          <li
+                            style="width: calc(100% / 1)"
+                          >
+                            <a href="https://www.materials-marketplace.eu/">
+                              <img
+                                src="https://www.the-marketplace-project.eu/content/dam/iwm/the-marketplace-project/images/MARKETPLACE_LOGO_300dpi.png"
+                                alt="Materials Modeling MarketPlace"
+                              />
+                            </a>
+                          </li>
+                          
+                        </ul>
+                      </div>
+                       
+                    </div>
+                    <div class="status">
+                      Status: NOT AVAILABLE
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <a
+                      href="https://materials-marketplace.aiidalab.net"
+                      class="btn btn-primary"
+                      style="background: #05587B"
+                      >Login </a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-6 col-xxl-4">
+              <div class="deployment">
+                <div class="card text-center shadow">
+                  <img
+                    src="https://nffa.eu/content/images/2021/Logo%20NFFA.png"
+                    class="card-img-top"
+                    alt="Materials Cloud - NEP"
+                  />
+                  <div
+                    class="card-header"
+                    style="background: #E5642A"
+                  >
+                    Materials Cloud - NEP
+                  </div>
+                  <div class="card-body">
+                    <div class="content">
+                      <div class="host">
+                        <h6>Hosted by</h6>
+                        
+                        <a href="https://www.cscs.ch/">Swiss National Supercomputing Centre (CSCS)</a><br />
+                        
+                      </div>
+                      <div class="access">
+                        <h6>Access</h6>
+                        Open to all researchers affiliated with <a href="https://www.nffa.eu/news/project-updates/pilot-nep/">NFFA-Europe PILOT (NEP) affiliation</a>
+                      </div>
+                      
+                      <div class="sponsors">
+                        <h6>Sponsored by</h6>
+                        <ul>
+                          
+                          <li
+                            style="width: calc(100% / 1)"
+                          >
+                            <a href="https://www.nffa.eu/news/project-updates/pilot-nep/">
+                              <img
+                                src="/pr-preview/pr-22/images/endorsers/nffa.png"
+                                alt="NFFA-Europe PILOT (NEP)"
+                              />
+                            </a>
+                          </li>
+                          
+                        </ul>
+                      </div>
+                       
+                    </div>
+                    <div class="status">
+                      Status: ONLINE
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <a
+                      href="https://aiidalab-nep.materialscloud.org"
+                      class="btn btn-primary"
+                      style="background: #E5642A"
+                      >Login </a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
       </div>
-    </li>
+    </div>
     
-  </ul>
-  
-  <ul class="deployment">
-    <li style="background: #E5642A">
-      <h3>Materials Cloud - NEP</h3>
-    </li>
-    
-    <li  class="highlighted" >
-      Open to all researchers affiliated with <a href="https://www.nffa.eu/news/project-updates/pilot-nep/">NFFA-Europe PILOT (NEP) affiliation</a>  
-    </li>
-    
-    <li >
-      Hosted at the <a href="https://www.cscs.ch/">Swiss National Supercomputing Centre (CSCS)</a>  
-    </li>
-    
-    <li >
-      Sponsored by <a href="https://www.nffa.eu/news/project-updates/pilot-nep/">NEP</a>  
-    </li>
-    
-    <li >
-        
-      <img src="/images/endorsers/nffa.png" alt="NFFA-Europe PILOT logo" />
-      
-    </li>
-     
-    <li class="deployments-cta">
-      <div class="status">Status: ONLINE</div>
-      <div class="button">
-        <a
-          style="background: #E5642A"
-          href="https://aiidalab-nep.materialscloud.org"
-          >Login &rarr;</a
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="heading3">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapse3"
+          aria-expanded="true"
+          aria-controls="collapse3"
         >
+          Institutional
+        </button>
+      </h2>
+      <div
+        id="collapse3"
+        class="accordion-collapse collapse "
+        aria-labelledby="heading3"
+        data-bs-parent="#deploymentsAccordion"
+      >
+        <div class="accordion-body">
+          
+          <div class="alert alert-warning" role="alert">
+            <strong>Attention:</strong> The deployments in this category are
+            restricted to members of the respective institutions. They will most
+            likely require access to the respective institution's network, e.g.,
+            via VPN or physical presence at the institution.
+          </div>
+          
+          <div class="deployments row gy-4">
+            
+            <div class="col-md-6 col-xxl-4">
+              <div class="deployment">
+                <div class="card text-center shadow">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDTH82FMk7yk26-lNuUBsGL5qbM5vMWuu8nQ&s"
+                    class="card-img-top"
+                    alt="PSI"
+                  />
+                  <div
+                    class="card-header"
+                    style="background: #D21F15"
+                  >
+                    PSI
+                  </div>
+                  <div class="card-body">
+                    <div class="content">
+                      <div class="host">
+                        <h6>Hosted by</h6>
+                        
+                        <a href="https://www.psi.ch">Paul Scherrer Institut (PSI)</a><br />
+                        
+                      </div>
+                      <div class="access">
+                        <h6>Access</h6>
+                        Open to all PSI employees
+                      </div>
+                       
+                    </div>
+                    <div class="status">
+                      Status: ONLINE
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <a
+                      href="https://aiidalab.psi.ch"
+                      class="btn btn-primary"
+                      style="background: #D21F15"
+                      >Login  [requires
+                      VPN]</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
       </div>
-    </li>
+    </div>
     
-  </ul>
-  
+  </div>
 </div>
 
 
@@ -377,7 +657,15 @@ funded by the
 <a href="http://www.snf.ch/en">Swiss National Science Foundation</a>, the
 MARKETPLACE project funded by
 <a href="https://ec.europa.eu/programmes/horizon2020/">Horizon 2020</a> under
-the H2020-NMBP-25-2017 call (Grant No.&nbsp;760173), as well as by the
+the H2020-NMBP-25-2017 call (Grant No.&nbsp;760173), the
+<a href="https://ord-premise.org">PREMISE project</a>, a
+<a href="https://ethrat.ch/en/measure-1-calls-for-field-specific-actions/"
+  >measure 1 Establish project</a
+>
+funded by the
+<a href="https://ethrat.ch/en/eth-domain/open-research-data/"
+  >Open Research Data Program of the ETH Board</a
+>, as well as by the
 <a href="http://www.max-centre.eu/">MaX European Centre of Excellence</a> funded
 by the Horizon 2020 EINFRA-5 program, Grant No.&nbsp;676598, and other
 <a href="https://www.materialscloud.org/home#partners"
