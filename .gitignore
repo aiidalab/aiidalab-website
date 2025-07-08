@@ -2,3 +2,7 @@ _site/
 .sass-cache/
 .jekyll-metadata/
 .jekyll-cache/
+
+# Build files
+.bundle/
+vendor/bundle/
