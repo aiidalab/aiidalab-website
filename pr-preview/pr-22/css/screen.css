@@ -106,6 +106,10 @@ blockquote:before { color: #ccc; content: open-quote; font-size: 4em; line-heigh
 
 .editor-link .btn:hover { background-color: #f4d525; color: #333; }
 
+.deployments-page .accordion-header .accordion-button { font-size: 1.5rem; font-weight: bold; margin: 0 auto; }
+
+.deployment-category-heading { margin: 20px 0; text-align: center; }
+
 .deployments { padding: 5px 0; }
 
 .deployments .deployment { height: 100%; }
@@ -134,7 +138,9 @@ blockquote:before { color: #ccc; content: open-quote; font-size: 4em; line-heigh
 
 .deployments .deployment .card .card-body .content .sponsors ul { display: flex; flex-direction: row; align-items: center; }
 
-.deployments .deployment .card .card-body .content .sponsors img { height: auto; width: 100%; }
+.deployments .deployment .card .card-body .content .sponsors img { height: auto; width: 100%; max-width: 300px; }
+
+.deployments .deployment .card .card-body .warning { margin-bottom: 10px; font-weight: bold; }
 
 .deployments .deployment .card .card-body .status { font-weight: bold; }
 
