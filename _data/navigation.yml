@@ -17,6 +17,10 @@
   link: /about/
   new_window: false
   highlight: false
+- name: Apps
+  link: https://aiidalab.github.io/aiidalab-registry
+  new_window: true
+  highlight: false
 #- name: Contact
 #  link: /contact/
 #  new_window: false
