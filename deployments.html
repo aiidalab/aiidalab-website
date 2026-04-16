@@ -1,7 +1,7 @@
 ---
 title: Deployments
 heading: Official Deployments
-description: You can <a href="https://aiidalab.readthedocs.io/en/latest/usage/index.html#aiidalab-launch">run AiiDAlab yourself</a>, however we also maintain a few official cloud-backed deployments for researchers affiliated with some of the projects funding the development of AiiDAlab.
+description: You can run AiiDAlab yourself, try it out on the demo server maintained by the AiiDAlab team, or use one of the institutional deployments (if you are part of those institutions).
 deployments_table:
   - name: Open to all
     deployments:
@@ -13,7 +13,17 @@ deployments_table:
             link: https://azure.microsoft.com
         access: Open to all researchers
         status: online
-        server: https://demo.aiidalab.io
+        button:
+          link: https://demo.aiidalab.io
+
+      - name: Local deployment
+        logo: aiidalab_logo.png
+        color: "#1a7300"
+        hosts:
+          - name: You, running on your computer/laptop
+        button:
+          text: Run it yourself
+          link: https://aiidalab.readthedocs.io/en/latest/usage/index.html#aiidalab-launch
 
   - name: Institutional
     deployments:
@@ -34,7 +44,8 @@ deployments_table:
           - href: https://aiidalab.materialscloud.org/hub/static/privacy-policy.html
             text: Privacy Policy (Personal Data Protection)
         status: online
-        server: https://aiidalab.empa.cscs.ch
+        button:
+          link: https://aiidalab.empa.cscs.ch
 
       - name: AiiDAlab@PSI
         logo: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDTH82FMk7yk26-lNuUBsGL5qbM5vMWuu8nQ&s
@@ -44,8 +55,9 @@ deployments_table:
             link: https://www.psi.ch
         access: Open to all PSI employees
         status: online
-        warning: Requires VPN access outside of PSI
-        server: https://aiidalab.psi.ch
+        button:
+          text: Login [requires PSI network access]
+          link: https://aiidalab.psi.ch
 
   - name: Other deployments
     deployments:
@@ -61,7 +73,8 @@ deployments_table:
             logo: https://www.the-marketplace-project.eu/content/dam/iwm/the-marketplace-project/images/MARKETPLACE_LOGO_300dpi.png
             link: https://www.materials-marketplace.eu/
         status: Offline
-        server: https://materials-marketplace.aiidalab.net
+        button:
+          link: https://materials-marketplace.aiidalab.net
 
       - name: Materials Cloud - NEP
         logo: https://nffa.eu/content/images/2021/Logo%20NFFA.png
@@ -75,7 +88,8 @@ deployments_table:
             logo: images/endorsers/nffa.png
             link: https://www.nffa.eu/news/project-updates/pilot-nep/
         status: Offline
-        server: https://aiidalab-nep.materialscloud.org
+        button:
+          link: https://aiidalab-nep.materialscloud.org
 
 faq:
   - question: How can I get access to the Materials Cloud deployments?
@@ -132,16 +146,25 @@ faq:
                     <div class="content">
                       <div class="host">
                         <h6>Hosted by</h6>
-                        {% for host in deployment.hosts %} {% if host.link %}
+                        {% for host in deployment.hosts %}
+                        <!---->
+                        {% if host.link %}
                         <a href="{{ host.link }}">{{ host.name }}</a>
-                        {% else %} {{ host.name }} {% endif %}
+                        {% else %}
+                        <!---->
+                        {{ host.name }}
+                        <!---->
+                        {% endif %}
                         <br />
                         {% endfor %}
                       </div>
+                      {% if deployment.access %}
                       <div class="access">
                         <h6>Access</h6>
                         {{ deployment.access }}
                       </div>
+                      {% endif %}
+                      <!---->
                       {% if deployment.sponsors %}
                       <div class="sponsors">
                         <h6>Sponsored by</h6>
@@ -160,7 +183,9 @@ faq:
                           {% endfor %}
                         </ul>
                       </div>
-                      {% endif %} {% if deployment.policies %}
+                      {% endif %}
+                      <!---->
+                      {% if deployment.policies %}
                       <div class="policies">
                         <h6>Policies</h6>
                         <ul>
@@ -176,17 +201,20 @@ faq:
                     {% if deployment.warning %}
                     <div class="warning">{{ deployment.warning }}</div>
                     {% endif %}
+                    <!---->
+                    {% if deployment.status %}
                     <div class="status">
                       Status: {{ deployment.status | upcase }}
                     </div>
+                    {% endif %}
                   </div>
                   <div class="card-footer">
                     {% if deployment.status != 'Offline' %}
                     <a
-                      href="{{ deployment.server }}"
+                      href="{{ deployment.button.link }}"
                       class="btn btn-primary"
                       style="background: {{ deployment.color }}"
-                      >Login
+                      >{{ deployment.button.text | default: 'Login' }}
                     </a>
                     {% endif %}
                   </div>
