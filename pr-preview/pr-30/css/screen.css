@@ -28,7 +28,7 @@ p, address { font-size: 1.38em; color: #666; margin-bottom: 20px; font-weight: 3
 
 .testimonial { background: #f5f5f5; margin: 0; padding: 100px 0; }
 
-.testimonial .video-block { width: 98%; align: center; }
+.testimonial .video-block { width: 98%; text-align: center; }
 
 .testimonial .video-block .embed-container { position: relative; padding-right: 1em; padding: 1em; overflow: hidden; max-width: 45%; }
 
@@ -48,7 +48,7 @@ p, address { font-size: 1.38em; color: #666; margin-bottom: 20px; font-weight: 3
 
 .citation h2 { margin-top: 60px; margin-bottom: 10px; }
 
-.citation .reference { font-style: italic; font-weight: normal; }
+.citation .reference b { font-weight: bold; }
 
 .container, .text-container { margin: 0 auto; position: relative; padding: 0 20px; }
 
