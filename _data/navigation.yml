@@ -10,6 +10,10 @@
   link: /deployments/
   new_window: false
   highlight: false
+- name: Events
+  link: /events/
+  new_window: false
+  highlight: false
 - name: GitHub
   link: https://github.com/aiidalab
   new_window: true
