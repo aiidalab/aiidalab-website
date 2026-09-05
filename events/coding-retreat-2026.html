@@ -71,10 +71,38 @@ permalink: /events/coding-retreat-2026/
       gap: 18px;
       margin: 35px 0 55px;
     }
-    .retreat-page .summary-grid div {
+    .retreat-page .summary-grid > div {
       padding: 22px;
       border: 1px solid #dbe4ea;
       border-radius: 3px;
+    }
+    .retreat-page .summary-grid .organizers {
+      grid-column: 1 / -1;
+    }
+    .retreat-page .organizer-list {
+      display: grid;
+      gap: 14px;
+    }
+    .retreat-page .organizer-row {
+      display: grid;
+      grid-template-columns: minmax(180px, 240px) 155px;
+      min-height: 54px;
+      align-items: center;
+      justify-content: start;
+      gap: 28px;
+      padding-top: 14px;
+      border-top: 1px solid #e7edf1;
+    }
+    .retreat-page .organizer-row:first-child {
+      padding-top: 4px;
+      border-top: 0;
+    }
+    .retreat-page .organizer-row img {
+      display: block;
+      width: auto;
+      max-width: 155px;
+      height: 48px;
+      object-fit: contain;
     }
     .retreat-page .summary-grid strong,
     .retreat-page .summary-grid span {
@@ -175,6 +203,14 @@ permalink: /events/coding-retreat-2026/
       .retreat-page .participants {
         grid-template-columns: 1fr;
       }
+      .retreat-page .organizer-row {
+        grid-template-columns: minmax(135px, 1fr) minmax(100px, 120px);
+        gap: 18px;
+      }
+      .retreat-page .organizer-row img {
+        max-width: 120px;
+        height: 40px;
+      }
       .retreat-page .program th {
         width: 105px;
       }
@@ -196,6 +232,29 @@ permalink: /events/coding-retreat-2026/
     <div><strong>When</strong><span>21–25 September 2026</span></div>
     <div><strong>Where</strong><span>Pietrasanta, Italy + online</span></div>
     <div><strong>Capacity</strong><span>8 on site + 8 remote</span></div>
+    <div class="organizers">
+      <strong>Organizers</strong>
+      <div class="organizer-list">
+        <div class="organizer-row">
+          <span>Carlo A. Pignedoli</span>
+          <a href="https://www.empa.ch/" aria-label="Empa">
+            <img
+              src="{{ site.baseurl }}/images/endorsers/empa.png"
+              alt="Empa"
+            />
+          </a>
+        </div>
+        <div class="organizer-row">
+          <span>Giovanni Pizzi</span>
+          <a href="https://www.psi.ch/" aria-label="Paul Scherrer Institute">
+            <img
+              src="{{ site.baseurl }}/images/endorsers/psi.svg"
+              alt="Paul Scherrer Institute PSI"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 
   <p>
@@ -468,16 +527,17 @@ permalink: /events/coding-retreat-2026/
     <section>
       <h4>In Pietrasanta · maximum 8</h4>
       <ul>
-        <li>Carlo Pignedoli</li>
-        <li>Aliaksandr Yakutovich</li>
-        <li>Edan Bainglass</li>
-        <li>5 places open</li>
+        <li>Carlo Pignedoli (Empa)</li>
+        <li>Aliaksandr Yakutovich (Empa)</li>
+        <li>Edan Bainglass (PSI)</li>
+        <li>Daniel Hollas (University of Bristol)</li>
+        <li>4 places open</li>
       </ul>
     </section>
     <section>
       <h4>Remote · maximum 8</h4>
       <ul>
-        <li>Giovanni Pizzi</li>
+        <li>Giovanni Pizzi (PSI)</li>
         <li>7 places open</li>
       </ul>
     </section>
