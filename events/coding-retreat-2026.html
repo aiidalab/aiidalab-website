@@ -65,6 +65,40 @@ permalink: /events/coding-retreat-2026/
       border-left: 5px solid #2377b6;
       background: #eef6fb;
     }
+    .retreat-page .retreat-tabs {
+      display: flex;
+      gap: 8px;
+      margin-top: 48px;
+      border-bottom: 1px solid #cbd9e2;
+    }
+    .retreat-page .retreat-tab {
+      margin: 0 0 -1px;
+      padding: 13px 20px;
+      border: 1px solid transparent;
+      border-bottom: 0;
+      border-radius: 4px 4px 0 0;
+      color: #526979;
+      background: transparent;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .retreat-page .retreat-tab:hover {
+      color: #19527d;
+      background: #f3f8fb;
+    }
+    .retreat-page .retreat-tab[aria-selected="true"] {
+      color: #19527d;
+      border-color: #cbd9e2;
+      background: #fff;
+    }
+    .retreat-page .retreat-tab:focus-visible {
+      outline: 3px solid rgba(35, 119, 182, 0.35);
+      outline-offset: 2px;
+    }
+    .retreat-page .retreat-panel {
+      padding-top: 1px;
+    }
     .retreat-page .summary-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -241,6 +275,13 @@ permalink: /events/coding-retreat-2026/
       .retreat-page .program th {
         width: 105px;
       }
+      .retreat-page .retreat-tabs {
+        overflow-x: auto;
+      }
+      .retreat-page .retreat-tab {
+        flex: 1 0 auto;
+        padding: 12px 15px;
+      }
     }
   </style>
 
@@ -297,326 +338,430 @@ permalink: /events/coding-retreat-2026/
     separately by email.
   </div>
 
-  <h3>Proposed contributions</h3>
-  <p class="contributions-intro">
-    Participants are invited to share the projects and objectives they plan to
-    work on during the retreat. The list will be updated as contributions are
-    proposed.
-  </p>
-
-  <article class="contribution-card">
-    <h4>Carlo Pignedoli</h4>
-    <p class="contribution-affiliation">Empa</p>
-    <ul>
-      <li>
-        Support, test, and help complete the migration of the
-        <a href="https://github.com/aiidalab/aiidalab-qe"
-          >AiiDAlab Quantum ESPRESSO app</a
-        >
-        to the AiiDAlab environment based on AiiDA 2.9.
-      </li>
-      <li>
-        Finalize the migration of the
-        <a href="https://github.com/nanotech-empa/aiidalab-empa-surfaces"
-          >AiiDAlab app for on-surface chemistry</a
-        >
-        and other Empa AiiDAlab applications to the AiiDA 2.9 environment.
-      </li>
-      <li>
-        Complete applications for exporting calculations performed at Empa to
-        openBIS, supporting the research-data-management workflow developed
-        within the <a href="https://ord-premise.org/">PREMISE project</a>.
-      </li>
-    </ul>
-  </article>
-
-  <h3>Program</h3>
-  <p>
-    The program is intentionally flexible. Coding topics and working groups can
-    be adjusted during the daily kickoff according to progress and priorities.
-  </p>
-
-  <h4>Monday, 21 September — Kickoff and planning</h4>
-  <table class="program">
-    <tbody>
-      <tr>
-        <th>07:30–08:30</th>
-        <td>Breakfast</td>
-      </tr>
-      <tr>
-        <th>09:00–09:30</th>
-        <td>Welcome, introductions, and connection with remote participants</td>
-      </tr>
-      <tr>
-        <th>09:30–10:30</th>
-        <td>Presentation of proposed topics and objectives</td>
-      </tr>
-      <tr>
-        <th>10:30–10:45</th>
-        <td>Coffee break</td>
-      </tr>
-      <tr>
-        <th>10:45–12:30</th>
-        <td>Define working groups, priorities, and expected outcomes</td>
-      </tr>
-      <tr>
-        <th>12:30–14:00</th>
-        <td>Lunch break</td>
-      </tr>
-      <tr>
-        <th>14:00–14:45</th>
-        <td>Technical discussion and coordination</td>
-      </tr>
-      <tr>
-        <th>14:45–16:00</th>
-        <td>Focused coding and pair work</td>
-      </tr>
-      <tr>
-        <th>16:00–16:15</th>
-        <td>Coffee break</td>
-      </tr>
-      <tr>
-        <th>16:15–17:30</th>
-        <td>Coding, issue triage, and preparation of pull requests</td>
-      </tr>
-      <tr>
-        <th>17:30–18:00</th>
-        <td>Daily wrap-up and planning for Tuesday</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <h4>Tuesday–Thursday, 22–24 September — Coding days</h4>
-  <table class="program">
-    <tbody>
-      <tr>
-        <th>07:30–08:30</th>
-        <td>Breakfast</td>
-      </tr>
-      <tr>
-        <th>09:00–10:00</th>
-        <td>Focused coding and continuation of ongoing tasks</td>
-      </tr>
-      <tr>
-        <th>10:00–10:30</th>
-        <td>
-          Daily synchronization with remote participants: progress, blockers,
-          and plans
-        </td>
-      </tr>
-      <tr>
-        <th>10:30–10:45</th>
-        <td>Coffee break</td>
-      </tr>
-      <tr>
-        <th>10:45–12:30</th>
-        <td>Coding, pair programming, testing, and documentation</td>
-      </tr>
-      <tr>
-        <th>12:30–14:00</th>
-        <td>Lunch break</td>
-      </tr>
-      <tr>
-        <th>14:00–14:45</th>
-        <td>Technical discussion, short demo, or design session</td>
-      </tr>
-      <tr>
-        <th>14:45–16:00</th>
-        <td>Focused coding and collaborative work</td>
-      </tr>
-      <tr>
-        <th>16:00–16:15</th>
-        <td>Coffee break</td>
-      </tr>
-      <tr>
-        <th>16:15–17:30</th>
-        <td>Code review, testing, and preparation of pull requests</td>
-      </tr>
-      <tr>
-        <th>17:30–18:00</th>
-        <td>Daily wrap-up and planning for the next day</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <h4>Friday, 25 September — Finalization and closing</h4>
-  <table class="program">
-    <tbody>
-      <tr>
-        <th>07:30–08:30</th>
-        <td>Breakfast</td>
-      </tr>
-      <tr>
-        <th>09:00–09:30</th>
-        <td>
-          Daily synchronization and identification of remaining priorities
-        </td>
-      </tr>
-      <tr>
-        <th>09:30–10:30</th>
-        <td>Final coding and documentation</td>
-      </tr>
-      <tr>
-        <th>10:30–10:45</th>
-        <td>Coffee break</td>
-      </tr>
-      <tr>
-        <th>10:45–12:30</th>
-        <td>Testing, code review, and completion of pull requests</td>
-      </tr>
-      <tr>
-        <th>12:30–14:00</th>
-        <td>Lunch break</td>
-      </tr>
-      <tr>
-        <th>14:00–15:30</th>
-        <td>Final demonstrations and presentation of results</td>
-      </tr>
-      <tr>
-        <th>15:30–15:45</th>
-        <td>Coffee break</td>
-      </tr>
-      <tr>
-        <th>15:45–16:30</th>
-        <td>Review of outcomes and remaining tasks</td>
-      </tr>
-      <tr>
-        <th>16:30–17:00</th>
-        <td>Agree on responsibilities and follow-up actions</td>
-      </tr>
-      <tr>
-        <th>17:00</th>
-        <td>Closing of the retreat</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <p>
-    Remote participants are especially encouraged to join the daily
-    synchronization and technical discussion sessions. Links for online
-    participation will be shared with registered participants before the
-    retreat.
-  </p>
-
-  <div class="working-notes">
-    <p>
-      The retreat's objectives, daily progress, pull requests, and outcomes will
-      be documented collaboratively on HackMD.
-    </p>
-    <a href="https://hackmd.io/@aiidalab/rJTSgrTvGe"
-      >Working notes and daily progress</a
+  <div class="retreat-tabs" role="tablist" aria-label="Retreat information">
+    <button
+      class="retreat-tab"
+      id="program-tab"
+      type="button"
+      role="tab"
+      aria-selected="true"
+      aria-controls="program-panel"
     >
-  </div>
-
-  <h3>How to reach Pietrasanta</h3>
-  <p>
-    Pietrasanta has a railway station within walking distance of the town
-    centre. Train schedules and tickets are available from the
-    <a href="https://www.trenitalia.com/">Trenitalia website</a> and the
-    <a href="https://www.trenitalia.com/en/information/trenitalia-app.html"
-      >Trenitalia app</a
-    >.
-  </p>
-
-  <div class="notice">
-    <strong>Please check before travelling.</strong> The journey times below are
-    indicative and based on the current timetable. Italian train timetables may
-    be updated for September 2026; please check your complete journey on
-    Trenitalia before departure.
-  </div>
-
-  <h4>From Pisa Airport — recommended</h4>
-  <p>
-    Take the <a href="https://pisa-mover.com/en/shuttle-service/">PisaMover</a>
-    from the airport to Pisa Centrale. The journey takes approximately five
-    minutes. From Pisa Centrale, direct regional trains to Pietrasanta typically
-    take approximately 25–40 minutes.
-  </p>
-
-  <h4>From Florence Airport</h4>
-  <p>
-    Take tram line T2 from the airport to Firenze Santa Maria Novella railway
-    station; the tram journey takes approximately 20 minutes. From Firenze Santa
-    Maria Novella, continue by train to Pietrasanta. Depending on the
-    connection, the train journey takes approximately 1 hour 30 minutes to 2
-    hours.
-  </p>
-  <p>
-    Alternatively, a taxi from the airport to Firenze Rifredi station may be
-    convenient when it connects with a suitable train. Many trains towards
-    Pietrasanta stop at Firenze Rifredi, but please check the departure station
-    and timetable carefully.
-  </p>
-
-  <h4>From Genoa Airport</h4>
-  <p>
-    Genoa Airport is a possible alternative, although the onward journey is
-    longer than from Pisa. The Airlink bus connects the airport with Genova
-    Sestri Ponente Aeroporto railway station; alternatively, the Volabus
-    connects the airport with Genova Piazza Principe and Genova Brignole
-    stations. From Genoa, continue by train towards La Spezia and Pietrasanta.
-    The journey normally takes approximately 2–3 hours and may require a change.
-  </p>
-
-  <h4>From Milan</h4>
-  <p>
-    The journey from Milano Centrale is relatively long. Current connections to
-    Pietrasanta take approximately 3 hours 45 minutes or longer and require at
-    least one change. Some long-distance trains stop at Massa Centro, which can
-    be a useful alternative when a pickup has been arranged. From Massa Centro,
-    Pietrasanta can also be reached by regional train or taxi.
-  </p>
-
-  <h4>Viareggio as an alternative arrival station</h4>
-  <p>
-    Some trains do not stop in Pietrasanta but do stop in Viareggio. Viareggio
-    is approximately ten minutes from Pietrasanta by car, and regional trains
-    connect Viareggio and Pietrasanta approximately every 30 minutes.
-  </p>
-
-  <div class="notice">
-    <strong>Complimentary pickup.</strong> A free pickup service from
-    Pietrasanta, Massa Centro, and Viareggio railway stations will be organized
-    for retreat participants. Pickup from Pisa Airport can also be arranged when
-    genuinely necessary. All pickups must be coordinated directly with the
-    organizers in advance.
-  </div>
-
-  <h3>Participants</h3>
-  <div class="participants">
-    <section>
-      <h4>In Pietrasanta · maximum 8</h4>
-      <ul>
-        <li>Carlo Pignedoli (Empa)</li>
-        <li>Aliaksandr Yakutovich (Empa)</li>
-        <li>Edan Bainglass (PSI)</li>
-        <li>Daniel Hollas (University of Bristol)</li>
-        <li>4 places open</li>
-      </ul>
-    </section>
-    <section>
-      <h4>Remote · maximum 8</h4>
-      <ul>
-        <li>Giovanni Pizzi (PSI)</li>
-        <li>7 places open</li>
-      </ul>
-    </section>
-  </div>
-
-  <div class="register">
-    <h3>Registration</h3>
-    <p>
-      To request a place, email Carlo Pignedoli. Please state whether you plan
-      to participate on site or remotely and briefly describe your intended
-      project or focus.
-    </p>
-    <a
-      class="email-button"
-      href="mailto:carlo.pignedoli@empa.ch?subject=Registration%20%E2%80%93%202nd%20AiiDAlab%20Coding%20Retreat"
-      >Write to carlo.pignedoli@empa.ch</a
+      Program
+    </button>
+    <button
+      class="retreat-tab"
+      id="participants-tab"
+      type="button"
+      role="tab"
+      aria-selected="false"
+      aria-controls="participants-panel"
+      tabindex="-1"
     >
-    <p>
-      <small>Your place is confirmed only after you receive a reply.</small>
-    </p>
+      Participants
+    </button>
+    <button
+      class="retreat-tab"
+      id="travel-tab"
+      type="button"
+      role="tab"
+      aria-selected="false"
+      aria-controls="travel-panel"
+      tabindex="-1"
+    >
+      How to reach Pietrasanta
+    </button>
   </div>
+
+  <section
+    class="retreat-panel"
+    id="program-panel"
+    role="tabpanel"
+    aria-labelledby="program-tab"
+  >
+    <h3>Proposed contributions</h3>
+    <p class="contributions-intro">
+      Participants are invited to share the projects and objectives they plan to
+      work on during the retreat. The list will be updated as contributions are
+      proposed.
+    </p>
+
+    <article class="contribution-card">
+      <h4>Carlo Pignedoli</h4>
+      <p class="contribution-affiliation">Empa</p>
+      <ul>
+        <li>
+          Support, test, and help complete the migration of the
+          <a href="https://github.com/aiidalab/aiidalab-qe"
+            >AiiDAlab Quantum ESPRESSO app</a
+          >
+          to the AiiDAlab environment based on AiiDA 2.9.
+        </li>
+        <li>
+          Finalize the migration of the
+          <a href="https://github.com/nanotech-empa/aiidalab-empa-surfaces"
+            >AiiDAlab app for on-surface chemistry</a
+          >
+          and other Empa AiiDAlab applications to the AiiDA 2.9 environment.
+        </li>
+        <li>
+          Complete applications for exporting calculations performed at Empa to
+          openBIS, supporting the research-data-management workflow developed
+          within the <a href="https://ord-premise.org/">PREMISE project</a>.
+        </li>
+      </ul>
+    </article>
+
+    <h3>Program</h3>
+    <p>
+      The program is intentionally flexible. Coding topics and working groups
+      can be adjusted during the daily kickoff according to progress and
+      priorities.
+    </p>
+
+    <h4>Monday, 21 September — Kickoff and planning</h4>
+    <table class="program">
+      <tbody>
+        <tr>
+          <th>07:30–08:30</th>
+          <td>Breakfast</td>
+        </tr>
+        <tr>
+          <th>09:00–09:30</th>
+          <td>
+            Welcome, introductions, and connection with remote participants
+          </td>
+        </tr>
+        <tr>
+          <th>09:30–10:30</th>
+          <td>Presentation of proposed topics and objectives</td>
+        </tr>
+        <tr>
+          <th>10:30–10:45</th>
+          <td>Coffee break</td>
+        </tr>
+        <tr>
+          <th>10:45–12:30</th>
+          <td>Define working groups, priorities, and expected outcomes</td>
+        </tr>
+        <tr>
+          <th>12:30–14:00</th>
+          <td>Lunch break</td>
+        </tr>
+        <tr>
+          <th>14:00–14:45</th>
+          <td>Technical discussion and coordination</td>
+        </tr>
+        <tr>
+          <th>14:45–16:00</th>
+          <td>Focused coding and pair work</td>
+        </tr>
+        <tr>
+          <th>16:00–16:15</th>
+          <td>Coffee break</td>
+        </tr>
+        <tr>
+          <th>16:15–17:30</th>
+          <td>Coding, issue triage, and preparation of pull requests</td>
+        </tr>
+        <tr>
+          <th>17:30–18:00</th>
+          <td>Daily wrap-up and planning for Tuesday</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h4>Tuesday–Thursday, 22–24 September — Coding days</h4>
+    <table class="program">
+      <tbody>
+        <tr>
+          <th>07:30–08:30</th>
+          <td>Breakfast</td>
+        </tr>
+        <tr>
+          <th>09:00–10:00</th>
+          <td>Focused coding and continuation of ongoing tasks</td>
+        </tr>
+        <tr>
+          <th>10:00–10:30</th>
+          <td>
+            Daily synchronization with remote participants: progress, blockers,
+            and plans
+          </td>
+        </tr>
+        <tr>
+          <th>10:30–10:45</th>
+          <td>Coffee break</td>
+        </tr>
+        <tr>
+          <th>10:45–12:30</th>
+          <td>Coding, pair programming, testing, and documentation</td>
+        </tr>
+        <tr>
+          <th>12:30–14:00</th>
+          <td>Lunch break</td>
+        </tr>
+        <tr>
+          <th>14:00–14:45</th>
+          <td>Technical discussion, short demo, or design session</td>
+        </tr>
+        <tr>
+          <th>14:45–16:00</th>
+          <td>Focused coding and collaborative work</td>
+        </tr>
+        <tr>
+          <th>16:00–16:15</th>
+          <td>Coffee break</td>
+        </tr>
+        <tr>
+          <th>16:15–17:30</th>
+          <td>Code review, testing, and preparation of pull requests</td>
+        </tr>
+        <tr>
+          <th>17:30–18:00</th>
+          <td>Daily wrap-up and planning for the next day</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h4>Friday, 25 September — Finalization and closing</h4>
+    <table class="program">
+      <tbody>
+        <tr>
+          <th>07:30–08:30</th>
+          <td>Breakfast</td>
+        </tr>
+        <tr>
+          <th>09:00–09:30</th>
+          <td>
+            Daily synchronization and identification of remaining priorities
+          </td>
+        </tr>
+        <tr>
+          <th>09:30–10:30</th>
+          <td>Final coding and documentation</td>
+        </tr>
+        <tr>
+          <th>10:30–10:45</th>
+          <td>Coffee break</td>
+        </tr>
+        <tr>
+          <th>10:45–12:30</th>
+          <td>Testing, code review, and completion of pull requests</td>
+        </tr>
+        <tr>
+          <th>12:30–14:00</th>
+          <td>Lunch break</td>
+        </tr>
+        <tr>
+          <th>14:00–15:30</th>
+          <td>Final demonstrations and presentation of results</td>
+        </tr>
+        <tr>
+          <th>15:30–15:45</th>
+          <td>Coffee break</td>
+        </tr>
+        <tr>
+          <th>15:45–16:30</th>
+          <td>Review of outcomes and remaining tasks</td>
+        </tr>
+        <tr>
+          <th>16:30–17:00</th>
+          <td>Agree on responsibilities and follow-up actions</td>
+        </tr>
+        <tr>
+          <th>17:00</th>
+          <td>Closing of the retreat</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      Remote participants are especially encouraged to join the daily
+      synchronization and technical discussion sessions. Links for online
+      participation will be shared with registered participants before the
+      retreat.
+    </p>
+
+    <div class="working-notes">
+      <p>
+        The retreat's objectives, daily progress, pull requests, and outcomes
+        will be documented collaboratively on HackMD.
+      </p>
+      <a href="https://hackmd.io/@aiidalab/rJTSgrTvGe"
+        >Working notes and daily progress</a
+      >
+    </div>
+  </section>
+
+  <section
+    class="retreat-panel"
+    id="travel-panel"
+    role="tabpanel"
+    aria-labelledby="travel-tab"
+    hidden
+  >
+    <h3>How to reach Pietrasanta</h3>
+    <p>
+      Pietrasanta has a railway station within walking distance of the town
+      centre. Train schedules and tickets are available from the
+      <a href="https://www.trenitalia.com/">Trenitalia website</a> and the
+      <a href="https://www.trenitalia.com/en/information/trenitalia-app.html"
+        >Trenitalia app</a
+      >.
+    </p>
+
+    <div class="notice">
+      <strong>Please check before travelling.</strong> The journey times below
+      are indicative and based on the current timetable. Italian train
+      timetables may be updated for September 2026; please check your complete
+      journey on Trenitalia before departure.
+    </div>
+
+    <h4>From Pisa Airport — recommended</h4>
+    <p>
+      Take the
+      <a href="https://pisa-mover.com/en/shuttle-service/">PisaMover</a>
+      from the airport to Pisa Centrale. The journey takes approximately five
+      minutes. From Pisa Centrale, direct regional trains to Pietrasanta
+      typically take approximately 25–40 minutes.
+    </p>
+
+    <h4>From Florence Airport</h4>
+    <p>
+      Take tram line T2 from the airport to Firenze Santa Maria Novella railway
+      station; the tram journey takes approximately 20 minutes. From Firenze
+      Santa Maria Novella, continue by train to Pietrasanta. Depending on the
+      connection, the train journey takes approximately 1 hour 30 minutes to 2
+      hours.
+    </p>
+    <p>
+      Alternatively, a taxi from the airport to Firenze Rifredi station may be
+      convenient when it connects with a suitable train. Many trains towards
+      Pietrasanta stop at Firenze Rifredi, but please check the departure
+      station and timetable carefully.
+    </p>
+
+    <h4>From Genoa Airport</h4>
+    <p>
+      Genoa Airport is a possible alternative, although the onward journey is
+      longer than from Pisa. The Airlink bus connects the airport with Genova
+      Sestri Ponente Aeroporto railway station; alternatively, the Volabus
+      connects the airport with Genova Piazza Principe and Genova Brignole
+      stations. From Genoa, continue by train towards La Spezia and Pietrasanta.
+      The journey normally takes approximately 2–3 hours and may require a
+      change.
+    </p>
+
+    <h4>From Milan</h4>
+    <p>
+      The journey from Milano Centrale is relatively long. Current connections
+      to Pietrasanta take approximately 3 hours 45 minutes or longer and require
+      at least one change. Some long-distance trains stop at Massa Centro, which
+      can be a useful alternative when a pickup has been arranged. From Massa
+      Centro, Pietrasanta can also be reached by regional train or taxi.
+    </p>
+
+    <h4>Viareggio as an alternative arrival station</h4>
+    <p>
+      Some trains do not stop in Pietrasanta but do stop in Viareggio. Viareggio
+      is approximately ten minutes from Pietrasanta by car, and regional trains
+      connect Viareggio and Pietrasanta approximately every 30 minutes.
+    </p>
+
+    <div class="notice">
+      <strong>Complimentary pickup.</strong> A free pickup service from
+      Pietrasanta, Massa Centro, and Viareggio railway stations will be
+      organized for retreat participants. Pickup from Pisa Airport can also be
+      arranged when genuinely necessary. All pickups must be coordinated
+      directly with the organizers in advance.
+    </div>
+  </section>
+
+  <section
+    class="retreat-panel"
+    id="participants-panel"
+    role="tabpanel"
+    aria-labelledby="participants-tab"
+    hidden
+  >
+    <h3>Participants</h3>
+    <div class="participants">
+      <section>
+        <h4>In Pietrasanta · maximum 8</h4>
+        <ul>
+          <li>Carlo Pignedoli (Empa)</li>
+          <li>Aliaksandr Yakutovich (Empa)</li>
+          <li>Edan Bainglass (PSI)</li>
+          <li>Daniel Hollas (University of Bristol)</li>
+          <li>4 places open</li>
+        </ul>
+      </section>
+      <section>
+        <h4>Remote · maximum 8</h4>
+        <ul>
+          <li>Giovanni Pizzi (PSI)</li>
+          <li>7 places open</li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="register">
+      <h3>Registration</h3>
+      <p>
+        To request a place, email Carlo Pignedoli. Please state whether you plan
+        to participate on site or remotely and briefly describe your intended
+        project or focus.
+      </p>
+      <a
+        class="email-button"
+        href="mailto:carlo.pignedoli@empa.ch?subject=Registration%20%E2%80%93%202nd%20AiiDAlab%20Coding%20Retreat"
+        >Write to carlo.pignedoli@empa.ch</a
+      >
+      <p>
+        <small>Your place is confirmed only after you receive a reply.</small>
+      </p>
+    </div>
+  </section>
+
+  <script>
+    (function () {
+      var tabs = Array.prototype.slice.call(
+        document.querySelectorAll(".retreat-page [role='tab']"),
+      );
+      var panels = Array.prototype.slice.call(
+        document.querySelectorAll(".retreat-page [role='tabpanel']"),
+      );
+
+      function activateTab(tab, moveFocus) {
+        tabs.forEach(function (item) {
+          var selected = item === tab;
+          item.setAttribute("aria-selected", selected ? "true" : "false");
+          item.setAttribute("tabindex", selected ? "0" : "-1");
+        });
+        panels.forEach(function (panel) {
+          panel.hidden = panel.id !== tab.getAttribute("aria-controls");
+        });
+        if (moveFocus) tab.focus();
+      }
+
+      tabs.forEach(function (tab, index) {
+        tab.addEventListener("click", function () {
+          activateTab(tab, false);
+        });
+        tab.addEventListener("keydown", function (event) {
+          var nextIndex;
+          if (event.key === "ArrowRight") nextIndex = (index + 1) % tabs.length;
+          if (event.key === "ArrowLeft")
+            nextIndex = (index - 1 + tabs.length) % tabs.length;
+          if (event.key === "Home") nextIndex = 0;
+          if (event.key === "End") nextIndex = tabs.length - 1;
+          if (nextIndex !== undefined) {
+            event.preventDefault();
+            activateTab(tabs[nextIndex], true);
+          }
+        });
+      });
+    })();
+  </script>
 </div>
