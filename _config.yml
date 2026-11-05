@@ -21,6 +21,13 @@ social:
   links:
     - https://github.com/aiidalab
 
+announcement:
+  enabled: false
+  label:
+  message:
+  url:
+  link_text:
+
 # -----
 # Build
 
