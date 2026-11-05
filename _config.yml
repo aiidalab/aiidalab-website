@@ -21,6 +21,13 @@ social:
   links:
     - https://github.com/aiidalab
 
+announcement:
+  enabled: true
+  label: "New release"
+  message: "AiiDAlab has been upgraded 🚀 Python 3.12, AiiDA 2.9+, nbclassic, and more!"
+  url: ""
+  link_text: "Learn more"
+
 # -----
 # Build
 

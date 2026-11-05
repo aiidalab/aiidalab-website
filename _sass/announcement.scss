@@ -1,0 +1,42 @@
+.announcement-banner {
+  background: #173d63;
+  color: #fff;
+  padding: 12px 20px;
+  text-align: center;
+
+  .announcement-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px 12px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .announcement-label {
+    background: #c8f3df;
+    color: #173d63;
+    border-radius: 20px;
+    padding: 2px 10px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  a {
+    color: #b7e6ff;
+    font-weight: 600;
+    text-decoration: underline;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .announcement-banner {
+    padding: 12px 16px;
+  }
+}
